@@ -3,14 +3,17 @@
 // import viteLogo from '/vite.svg'
 // import './App.css'
 
+import { Route, Routes } from "react-router-dom"
 import Login from "./pages/Login"
+import Profile from "./pages/Profile"
 
 function App() {
 
   return (
-    <>
-      <Login/>
-    </>
+    <Routes>
+      <Route path="/" element={ <Login /> } />
+      <Route path="/profile" element={ <Profile /> } />
+    </Routes>
   )
 }
 
