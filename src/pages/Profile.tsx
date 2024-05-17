@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react"
 import { fetchGet } from "./Api"
+import { GetType } from "../types/typeGet"
+import { useNavigate } from "react-router-dom"
 
 function Profile() {
-  const [profile, setProfile] = useState()
+  const [profile, setProfile] = useState<GetType>()
+  const navigate = useNavigate()
 
   useEffect(() => {
   const fetchData = async () => {
@@ -10,14 +13,30 @@ function Profile() {
     await fetchGet(token)
     .then((data) => {
       setProfile(data)
+      console.log(data)
     })
   }
   fetchData()
   }, [])
-  console.log(profile)
+
+  const handleClick = () => {
+    localStorage.removeItem('token')
+    navigate('/')
+  }
+
+  const imgg = profile?.avatar.image_low_url
 
   return (
-    <h1>Profile</h1>
+    <>
+      <h1>{profile?.name}</h1>
+      <main>
+        <img src={imgg} alt={`foto de ${profile?.name}`} />
+        <button
+        onClick={ handleClick }>
+          Log Out
+        </button>
+      </main>
+    </>
   )
 }
 
