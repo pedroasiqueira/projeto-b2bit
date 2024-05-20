@@ -1,6 +1,6 @@
 import { FormEvent, useState } from "react";
 import useInput from "../hooks/useInput"
-import { fetchPost } from "./Api";
+import { fetchPost } from "../utils/Api";
 import { AxiosError } from "axios";
 import { useNavigate } from "react-router-dom";
 

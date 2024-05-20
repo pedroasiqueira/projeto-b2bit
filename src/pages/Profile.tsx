@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { fetchGet } from "./Api"
+import { fetchGet } from "../utils/Api"
 import { GetType } from "../types/typeGet"
 import { useNavigate } from "react-router-dom"
 
