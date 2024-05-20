@@ -43,33 +43,39 @@ function Login() {
     <>
       <form
       onSubmit={ handleSubmit }
+      className="main-container"
       >
-        <label>E-mail</label>
+        <img className="logo-img" src="../../public/B2Bit Logo.png" alt="logo b2bit" />
+        <label className="label-element">E-mail</label>
         <input
         data-cy="email-input"
         type="email"
         placeholder="@gmail.com"
         value={ email.value }
         onChange={ email.onChange }
+        className="input-element"
         />
-        <label>Password</label>
+        <label className="label-element">Password</label>
         <input
         data-cy="password-input"
         type="password"
         placeholder="****************"
         value={ password.value }
         onChange={ password.onChange }
+        className="input-element"
         />
         {erro
           && (
             <span
             data-cy="error-message"
+            className="error"
             >
             {erro.typeErr}
           </span>
           )}
           <button
           data-cy="sign-in-button"
+          className="btn btn-login"
         >
           Sign In
         </button>
