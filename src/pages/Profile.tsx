@@ -8,15 +8,19 @@ function Profile() {
   const navigate = useNavigate()
 
   useEffect(() => {
-  const fetchData = async () => {
-    const token = localStorage.getItem('token')
-    await fetchGet(token)
-    .then((data) => {
-      setProfile(data)
-      console.log(data)
-    })
+  const token = localStorage.getItem('token')
+  if(!token){
+    navigate('/')
+  } else {
+    const fetchData = async () => {
+      await fetchGet(token)
+      .then((data) => {
+        setProfile(data)
+        console.log(data)
+      })
+    }
+    fetchData()
   }
-  fetchData()
   }, [])
 
   const handleClick = () => {
@@ -28,14 +32,31 @@ function Profile() {
 
   return (
     <>
-      <h1>{profile?.name}</h1>
       <main>
-        <img src={imgg} alt={`foto de ${profile?.name}`} />
+        <section>
+          <p>Profile picture</p>
+          <img src={imgg} alt={`foto de ${profile?.name}`} />
+          <div>
+            <p
+            data-cy="name"
+            >Your <strong>Name</strong></p>
+            <span
+            data-cy="name-user"
+            >{profile?.name}</span>
+            <p
+            data-cy="email"
+            >Your <strong>E-mail</strong></p>
+            <span
+            data-cy="email-user"
+            >{profile?.email}</span>
+          </div>
+        </section>
+      </main>
         <button
+        data-cy="button-Log-Out"
         onClick={ handleClick }>
           Log Out
         </button>
-      </main>
     </>
   )
 }

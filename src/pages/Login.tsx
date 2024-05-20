@@ -46,6 +46,7 @@ function Login() {
       >
         <label>E-mail</label>
         <input
+        data-cy="email-input"
         type="email"
         placeholder="@gmail.com"
         value={ email.value }
@@ -53,6 +54,7 @@ function Login() {
         />
         <label>Password</label>
         <input
+        data-cy="password-input"
         type="password"
         placeholder="****************"
         value={ password.value }
@@ -60,11 +62,14 @@ function Login() {
         />
         {erro
           && (
-            <span>
+            <span
+            data-cy="error-message"
+            >
             {erro.typeErr}
           </span>
           )}
           <button
+          data-cy="sign-in-button"
         >
           Sign In
         </button>
