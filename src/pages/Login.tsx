@@ -44,6 +44,7 @@ function Login() {
       <form
       onSubmit={ handleSubmit }
       >
+        <img className="logo-img" src="../../public/B2Bit Logo.png" alt="logo b2bit" />
         <label>E-mail</label>
         <input
         data-cy="email-input"
@@ -52,7 +53,7 @@ function Login() {
         value={ email.value }
         onChange={ email.onChange }
         />
-        <label>Password</label>
+        <label className="label">Password</label>
         <input
         data-cy="password-input"
         type="password"
@@ -64,12 +65,14 @@ function Login() {
           && (
             <span
             data-cy="error-message"
+            className="error"
             >
             {erro.typeErr}
           </span>
           )}
           <button
           data-cy="sign-in-button"
+          className="btn-login"
         >
           Sign In
         </button>
