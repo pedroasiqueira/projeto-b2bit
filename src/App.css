@@ -11,7 +11,7 @@ body {
   justify-content: center;
 }
 
-form {
+.main-container {
   width: 438px;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@ form {
   margin-bottom: 30px;
 }
 
- form label {
+.label-element {
   align-self: flex-start;
   margin-left: 25px;
   margin-top: 15px;
@@ -35,7 +35,7 @@ form {
   font-weight: bold;
 }
 
-form input {
+.input-element {
   border: none;
   border-radius: 9px;
   width: 350px;
@@ -44,19 +44,97 @@ form input {
   padding: 20px;
 }
 
-.btn-login {
+.btn {
   background: #02274F;
-  border-radius: 9px;
-  width: 390px;
-  padding: 15px;
   color: white;
-  margin: 30px;
-  margin-bottom: 40px;
   font-size: large;
   font-weight: bold;
 }
 
+.btn-login {
+  width: 390px;
+  padding: 15px;
+  margin: 30px;
+  margin-bottom: 40px;
+  border-radius: 9px;
+}
+
 .error {
   margin-top: 15px;
+  margin-left: 20px;
   color: #B3261E;
+}
+
+main {
+  background-color: #F1F5F9;
+  min-width: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-container {
+  width: 356px;
+  height: 315px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  border-radius: 18px;
+  background-color: white;
+  box-shadow: 0 0 5px 2px rgba(0.1, 0.1, 0.1, 0.1);
+}
+
+.img-text {
+  margin-top: 40px;
+  font-size: small;
+}
+
+.img-element {
+  width: 58px;
+  height: 56px;
+  margin-top: 10px;
+  font-size: small;
+}
+
+.user-details {
+  width: 100%;
+}
+
+.p-title {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+
+.p-details {
+  border: none;
+  border-radius: 8px;
+  background-color: #F1F1F1;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  font-size: small;
+  width: 270px;
+  padding: 13px;
+  padding-left: 20px;
+}
+
+header {
+  top: 0px;
+  background-color: white;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.btn-logout {
+  padding: 10px;
+  width: 272px;
+  margin-right: 20px;
+  border-radius: 6.33px;
 }

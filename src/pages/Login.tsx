@@ -43,23 +43,26 @@ function Login() {
     <>
       <form
       onSubmit={ handleSubmit }
+      className="main-container"
       >
         <img className="logo-img" src="../../public/B2Bit Logo.png" alt="logo b2bit" />
-        <label>E-mail</label>
+        <label className="label-element">E-mail</label>
         <input
         data-cy="email-input"
         type="email"
         placeholder="@gmail.com"
         value={ email.value }
         onChange={ email.onChange }
+        className="input-element"
         />
-        <label className="label">Password</label>
+        <label className="label-element">Password</label>
         <input
         data-cy="password-input"
         type="password"
         placeholder="****************"
         value={ password.value }
         onChange={ password.onChange }
+        className="input-element"
         />
         {erro
           && (
@@ -72,7 +75,7 @@ function Login() {
           )}
           <button
           data-cy="sign-in-button"
-          className="btn-login"
+          className="btn btn-login"
         >
           Sign In
         </button>

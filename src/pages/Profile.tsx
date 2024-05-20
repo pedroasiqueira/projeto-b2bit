@@ -32,31 +32,38 @@ function Profile() {
 
   return (
     <>
+      <header>
+          <button
+            data-cy="button-Log-Out"
+            className="btn btn-logout"
+            onClick={ handleClick }>
+              Log Out
+          </button>
+        </header>
       <main>
-        <section>
-          <p>Profile picture</p>
-          <img src={imgg} alt={`foto de ${profile?.name}`} />
-          <div>
+        <section className="profile-container">
+          <p className="img-text">Profile picture</p>
+          <img src={imgg} alt={`foto de ${profile?.name}`} className="img-element" />
+          <div className="user-details">
             <p
             data-cy="name"
+            className="p-title"
             >Your <strong>Name</strong></p>
-            <span
+            <p
             data-cy="name-user"
-            >{profile?.name}</span>
+            className="p-details"
+            >{profile?.name}</p>
             <p
             data-cy="email"
+            className="p-title"
             >Your <strong>E-mail</strong></p>
-            <span
+            <p
             data-cy="email-user"
-            >{profile?.email}</span>
+            className="p-details"
+            >{profile?.email}</p>
           </div>
         </section>
       </main>
-        <button
-        data-cy="button-Log-Out"
-        onClick={ handleClick }>
-          Log Out
-        </button>
     </>
   )
 }
