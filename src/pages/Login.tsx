@@ -3,7 +3,6 @@ import useInput from "../hooks/useInput"
 import { fetchPost } from "./Api";
 import { AxiosError } from "axios";
 import { useNavigate } from "react-router-dom";
-// import { detailError } from "../types/typePost";
 
 function Login() {
   const email = useInput('');
@@ -45,7 +44,7 @@ function Login() {
       onSubmit={ handleSubmit }
       className="main-container"
       >
-        <img className="logo-img" src="../../public/B2Bit Logo.png" alt="logo b2bit" />
+        <img className="logo-img" src="/B2Bit_Logo.png" alt="logo b2bit" />
         <label className="label-element">E-mail</label>
         <input
         data-cy="email-input"
