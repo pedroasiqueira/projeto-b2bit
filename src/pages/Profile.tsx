@@ -28,7 +28,7 @@ function Profile() {
     navigate('/')
   }
 
-  const imgg = profile?.avatar.image_low_url
+  const imgg = profile?.avatar.low
 
   return (
     <>
