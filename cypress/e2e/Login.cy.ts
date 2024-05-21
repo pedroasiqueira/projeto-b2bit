@@ -18,10 +18,11 @@ describe('validations test', () => {
     cy.get('[data-cy="sign-in-button"]').click()
     cy.get('[data-cy="error-message"]').should('have.text', 'Enter a valid E-mail')
   })
-  it('user redirect "/profile" after click button', () => {
+  it('user redirect "/profile" and check token in localStorage after click button', () => {
     cy.get('[data-cy="email-input"]').type('cliente@youdrive.com')
     cy.get('[data-cy="password-input"]').type('password')
     cy.get('[data-cy="sign-in-button"]').click()
     cy.location('pathname').should('eq', '/Profile')
+    cy.window().its('localStorage').invoke('getItem', 'token').should('not.be.null')
   })
 })

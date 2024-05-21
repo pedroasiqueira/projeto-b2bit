@@ -1,11 +1,22 @@
 # Boas vindas ao repositório do processo seletivo da b2bit
 
 <details>
-  <summary><strong>💻 Deploy</strong></summary><br />
+  <summary><b>💻 Deploy</b></summary><br />
   O deploy desse projeto foi feito atraves da plataforma Vercel.
 
   Se quiser dar uma olhada, só clicar nesse link: https://projeto-b2bit-iota.vercel.app/
-</details>
+
+* <details><summary><b>Obs sobre Login</b></summary>
+    Para conseguir fazer o login corretamente, terá que usar esse email e senha:
+
+    ```json
+    {
+      "email": "cliente@youdrive.com",
+      "password": "password"
+    }
+    ```
+  </details>
+</details><br />
 
 <details>
   <summary><strong>👨‍💻 Para rodar a aplicação em sua máquina</strong></summary><br />
