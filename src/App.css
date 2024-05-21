@@ -67,8 +67,8 @@ body {
 
 main {
   background-color: #F1F5F9;
-  width: 1440px;
-  height: 730px;
+  min-width: 100vmax;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
